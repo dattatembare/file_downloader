@@ -1,0 +1,26 @@
+{
+  "fm": {
+    "destination-path": "",
+    "username": "",
+    "password": "",
+    "protocol": ""
+  },
+  "ct": {
+    "destination-path": "",
+    "username": "",
+    "password": "",
+    "protocol": ""
+  },
+  "wil": {
+    "destination-path": "",
+    "username": "",
+    "password": "",
+    "protocol": ""
+  },
+  "ubn": {
+    "destination-path": "",
+    "username": "",
+    "password": "",
+    "protocol": ""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "jim": {
+    "user-input-config": "jim-user-input-config.json"
+  },
+  "mark": {
+    "user-input-config": "mark-user-input-config.json"
+  },
+  "wf": {
+    "user-input-config": "wf-user-input-config.json"
+  }
+}

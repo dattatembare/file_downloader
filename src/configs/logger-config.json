@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "disable_existing_loggers": "False",
+  "formatters": {
+    "standard": {
+      "format": "%(asctime)s [%(levelname)s] %(message)s"
+    }
+  },
+  "handlers": {
+    "default": {
+      "level": "INFO",
+      "formatter": "standard",
+      "class": "logging.StreamHandler"
+    },
+    "file_handler": {
+      "level": "INFO",
+      "filename": "lseg.log",
+      "class": "logging.handlers.TimedRotatingFileHandler",
+      "formatter": "standard",
+      "when": "d",
+      "interval": 1,
+      "backupCount": 7
+    },
+    "error_file_handler": {
+      "level": "INFO",
+      "filename": "error.log",
+      "class": "logging.handlers.TimedRotatingFileHandler",
+      "formatter": "standard",
+      "when": "d",
+      "interval": 1,
+      "backupCount": 7
+    }
+  },
+  "loggers": {
+    "": {
+      "handlers": [
+        "default",
+        "file_handler",
+        "error_file_handler"
+      ],
+      "level": "INFO",
+      "propagate": "True"
+    },
+    "error_logger": {
+      "handlers": [
+        "error_file_handler"
+      ],
+      "level": "ERROR",
+      "propagate": "True"
+    }
+  }
+}

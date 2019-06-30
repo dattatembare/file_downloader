@@ -1,0 +1,34 @@
+{
+  "wf-wffm": {
+    "input": {
+      "value": [
+        "CAS 2013 - C01",
+        "CAS 2016 - C04",
+        "CAS 2018 - C01"
+      ]
+    },
+    "filters": [
+      "Monthly Reference Pool File"
+    ]
+  },
+  "wf-ry": {
+    "input": {
+      "value": [
+        "Other Reports and Files"
+      ]
+    },
+    "filters": [
+      "Columbia Collateral File -"
+    ]
+  },
+  "wf-wfeu": {
+    "input": {
+      "value": [
+        "RMS 28"
+      ]
+    },
+    "filters": [
+      "Loan Date File"
+    ]
+  }
+}

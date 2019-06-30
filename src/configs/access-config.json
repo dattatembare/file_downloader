@@ -1,0 +1,303 @@
+{
+  "fm": {
+    "site-url": "https://www.fm.com",
+    "login-url": "",
+    "auth-url": "",
+    "access-url": [
+      {
+        "url": "https://www.fm.com/wp-content/uploads/LoanLevel01",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      },
+      {
+        "url": "https://www.fm.com/wp-content/uploads/Pool01",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      }
+    ]
+  },
+  "ct": {
+    "site-url": "https://sf.ct.com",
+    "login-url": "https://sf.ct.com/stfin/jsp/login.jsp",
+    "auth-url": "https://sf.ct.com/stfin/ATS_CheckLoginServlet",
+    "access-url": [
+      {
+        "url": "https://sf.ct.com/stfin/jsp/batchdownload.jsp",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [
+          "body/div/div/div/table/tbody/tr/td/form/table[3]/tbody/tr/td"
+        ],
+        "result-url-dict": {}
+      }
+    ]
+  },
+  "wil": {
+    "site-url": "https://www.wil.com",
+    "login-url": "https://www.wil.com/Account/Login",
+    "auth-url": "https://www.wil.com/Account/Login",
+    "access-url": [
+      {
+        "url": "https://www.wil.com/Home/ImageButtonAccept_Click",
+        "method": "POST",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      },
+      {
+        "url": "https://www.wil.com/DealReporter/Surveillance/Deals",
+        "method": "POST",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      },
+      {
+        "url": "https://www.wil.com/DealReporter/BasicSearch/ViewResults",
+        "method": "POST",
+        "input-param": {
+          "basicQueryString": ""
+        },
+        "xpath": [
+          "body/div/div[7]/div/div/div/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td"
+        ],
+        "result-url-dict": {}
+      }
+    ]
+  },
+  "ubn": {
+    "site-url": "https://ubn.com",
+    "login-url": "https://ubn1.com/portal/login.do",
+    "auth-url": "https://ubn1.com/access/oblix/apps/webgate/bin/webgate.dll?/portal/loginSuccess.do",
+    "access-url": [
+      {
+        "url": "https://ubn.com/TIR/portfolios",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      },
+      {
+        "url": "https://ubn.com/TIR/public/dealList/search",
+        "method": "GET",
+        "input-param": {
+          "cusip": "Value will be updated by user-input-config values",
+          "originatingButton": "deal"
+        },
+        "xpath": [
+          "body/div/div/input[@id='dealId']/@value",
+          "body/div/div/input[@id='dealName']/@value"
+        ],
+        "result-url-dict": {
+          "for_next_url": "True",
+          "dealId": "Value will be updated by xpath result",
+          "dealName": "Value will be updated by xpath result"
+        }
+      },
+      {
+        "url": "https://ubn.com/TIR/public/deals/periodicReportHistory/{dealId}/2/1?extension=PDF",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [
+          "body/div/form/table/tbody/tr/td"
+        ],
+        "result-url-dict": {}
+      }
+    ]
+  },
+  "wf-wffm": {
+    "site-url": "https://www.wf.com",
+    "login-url": "https://www.wf.com/a/welcome.html",
+    "auth-url": "https://wca.wf.com/wca/login/wgt/authService?request_locale=en_US&appId=appcts&brandId=CTSLink",
+    "access-url": [
+      {
+        "url": "https://www.wf.com/a/search.html",
+        "method": "POST",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      },
+      {
+        "url": "https://www.wf.com/a/seriessearch.html",
+        "method": "GET",
+        "input-param": {
+          "value": "Value will be updated by user-input-config values"
+        },
+        "xpath": [
+          "//*[@id='seriesList']/div[2]/table/tbody/tr[3]/th/a/@href",
+          "//*[@id='seriesList']/div[2]/table/tbody/tr[3]/th/a/text()"
+        ],
+        "result-url-dict": {
+          "for_next_url": "True",
+          "series_link": "Value will be updated by xpath result",
+          "series_name": "Value will be updated by xpath result"
+        }
+      },
+      {
+        "url": "https://www.wf.com{series_link}",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [
+          "//form[@id='seriesdocs']/table/tbody/tr"
+        ],
+        "result-url-dict": {}
+      }
+    ]
+  },
+  "wf-ry": {
+    "site-url": "https://www.wf.com",
+    "login-url": "https://www.wf.com/a/welcome.html",
+    "auth-url": "https://wca.wf.com/wca/login/wgt/authService?request_locale=en_US&appId=appcts&brandId=CTSLink",
+    "access-url": [
+      {
+        "url": "https://www.wf.com/a/search.html",
+        "method": "POST",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      },
+      {
+        "url": "https://www.wf.com/a/shelfsearch.html",
+        "method": "GET",
+        "input-param": {
+          "value": "Value will be updated by user-input-config values"
+        },
+        "xpath": [
+          "//*[@id='shelfList']/tbody/tr[3]/td[3]/a/@href",
+          "//*[@id='shelfList']/tbody/tr[3]/td[3]/a/text()"
+        ],
+        "result-url-dict": {
+          "for_next_url": "True",
+          "shelf_link": "Value will be updated by xpath result",
+          "shelf_name": "Value will be updated by xpath result"
+        }
+      },
+      {
+        "url": "https://www.wf.com{shelf_link}",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [
+          "//form[@id='seriesdocs']/table/tbody/tr"
+        ],
+        "result-url-dict": {}
+      }
+    ]
+  },
+  "wf-wfeu": {
+    "site-url": "https://www.wf.com",
+    "login-url": "https://www.wf.com/a/welcome.html",
+    "auth-url": "https://wca.wf.com/wca/login/wgt/authService?request_locale=en_US&appId=appcts&brandId=CTSLink",
+    "access-url": [
+      {
+        "url": "https://www.wf.com/a/search.html",
+        "method": "POST",
+        "input-param": {},
+        "xpath": [],
+        "result-url-dict": {}
+      },
+      {
+        "url": "https://www.wf.com/a/seriessearch.html",
+        "method": "GET",
+        "input-param": {
+          "value": "Value will be updated by user-input-config values"
+        },
+        "xpath": [
+          "//*[@id='seriesList']/div[2]/table/tbody/tr[3]/th/a/@href",
+          "//*[@id='seriesList']/div[2]/table/tbody/tr[3]/th/a/text()"
+        ],
+        "result-url-dict": {
+          "for_next_url": "True",
+          "series_link": "Value will be updated by xpath result",
+          "series_name": "Value will be updated by xpath result"
+        }
+      },
+      {
+        "url": "https://www.wf.com{series_link}",
+        "method": "GET",
+        "input-param": {},
+        "xpath": [
+          "//form[@id='seriesdocs']/table/tbody/tr"
+        ],
+        "result-url-dict": {}
+      }
+    ]
+  },
+  "bony": {
+    "site-url": "https://bony.com",
+    "login-url": "https://bony.com",
+    "auth-url": "https://bony.com/GCTIRServices/AuthenticationServlet",
+    "access-url": [
+      {
+        "url": "https://bony.com/GCTIRServices/SFRWServlet",
+        "method": "POST",
+        "input-param": {
+          "_Event": "Search.SearchDeal",
+          "hd_page_number": "1",
+          "hd_search_method": "BEGINS",
+          "hd_product_type": "ALL",
+          "hd_display_by": "CUSIP",
+          "hd_search_by": "CUSIP",
+          "hd_sort_by": "CUSIP_ASC",
+          "hd_linkclicked": "",
+          "hd_eventState": "HOMEPAGE",
+          "lb_product_type": "ALL",
+          "lb_search_by": "CUSIP",
+          "hd_records_per_page": "50",
+          "lb_quick_lookup": "Select",
+          "rb_search_method": "BEGINS",
+          "csrfKey": "value from authentication response",
+          "hd_search_for": "value from user-input-config"
+        },
+        "result-dict": {
+          "for_next_params": {
+            "csrfKey": "//form[@name='NavForm']/input[@name='csrfKey']/@value",
+            "hd_deal_number": "//table[@id='FirstLevelDataTable']/tbody/tr/td/input[@name='cb_cls_id']/@value"
+          }
+        }
+      },
+      {
+        "url": "https://bony.com/GCTIRServices/SFRWServlet",
+        "method": "POST",
+        "input-param": {
+          "_ReturnToEvent": "_Event%7ESEARCH.SEARCHDEAL%26_NavigationState%7EDEFAULT%26TB_SEARCH_FOR%7E04542BHM7%26HD_PAGE_NUMBER%7E1%26LB_SEARCH_BY%7ECUSIP%26LB_PRODUCT_TYPE%7EALL%26HD_EVENTSTATE%7EHOMEPAGE%26LB_QUICK_LOOKUP%7ESelect%26HD_PRODUCT_TYPE%7EALL%26HD_DISPLAY_BY%7ECUSIP%26HD_SEARCH_FOR%7E04542BHM7%26RB_SEARCH_METHOD%7EBEGINS%26HD_SEARCH_METHOD%7EBEGINS%26CSRFKEY%7Ep6mjWo9DDSwk8jm8lJO70Fxk0qZmigBI%26HD_LINKCLICKED%7E%26HD_SORT_BY%7ECUSIP_ASC%26HD_RECORDS_PER_PAGE%7E50%26HD_SEARCH_BY%7ECUSIP",
+          "_Event": "DEAL.DealReports",
+          "_NavigationState": "DEFAULT",
+          "BreadCrumbOldEventState": "SEARCHDEAL",
+          "csrfKey": "value will be updated by previous page result",
+          "hd_deal_number": "value will be updated by previous page result"
+        },
+        "result-dict": {
+          "for_next_params": {
+            "csrfKey": "//form[@name='NavForm']/input[@name='csrfKey']/@value"
+          },
+          "deal_info": {
+            "deal_name": "//td[@class='PageTitle']/text()",
+            "deal_number": "//form[@name='NavForm']/input[@name='HD_DEAL_NUMBER']/@value"
+          },
+          "for_parsing": [
+            "//table[@id='FirstLevelDataTable']/tbody/tr"
+          ]
+        },
+        "for_download_urls": {
+          "for_download": "True",
+          "download_url": "https://bony.com/GCTIRServices/SFRWReportDownloadServlet",
+          "method": "POST",
+          "request_body": {
+            "_ReturnToEvent": "_Event%7EDEAL.DEALREPORTS%26_NavigationState%7EDEFAULT%26CSRFKEY%7Ep6mjWo9DDSx20qtuDA%2Bvl87uABCc2Tgz%26BREADCRUMBOLDEVENTSTATE%7ESEARCHDEAL%26HD_DEAL_NUMBER%7E28756",
+            "hd_rpt_type": "R",
+            "hd_action": "D",
+            "BreadCrumbOldEventState": "SEARCHDEAL",
+            "lb_portfolio": "0",
+            "csrfKey": "csrf_key from parse result",
+            "hd_avl_rpt_id": "report_id from parse result",
+            "lb_reportdate": "report_date from parse result",
+            "hd_extension": "file_extension from parse result"
+          }
+        }
+      }
+    ]
+  }
+}

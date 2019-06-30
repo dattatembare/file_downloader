@@ -1,0 +1,29 @@
+{
+  "fm": {},
+  "ct": {
+    "username": "dattatembare",
+    "password": "pass2018"
+  },
+  "wil": {
+    "username": "dattatembare",
+    "password": "pass-2018!"
+  },
+  "ubn": {
+    "userID": "dattatembare@usb",
+    "userName": "dattatembare",
+    "password": "Z-ikWP.m6ADVTSz"
+  },
+  "wf-wffm": {
+    "data": "{\"userId\": \"dattatembare\",\"password\": \"pass2018!\"}"
+  },
+  "wf-ry": {
+    "data": "{\"userId\": \"dattatembare\",\"password\": \"pass2018!\"}"
+  },
+  "wf-wfeu": {
+    "data": "{\"userId\": \"dattatembare\",\"password\": \"pass2018!\"}"
+  },
+  "bony": {
+    "txtUserLogin": "dattatembare",
+    "txtUserPassword": "pass-2018"
+  }
+}
